@@ -1,0 +1,12 @@
+package com.arc.lince.gateways;
+
+import com.arc.lince.domains.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UsuarioRepository extends JpaRepository<Usuario,String> {
+    Optional<Usuario> findByUsername(String username);
+
+    boolean existsByUsername(String username);
+}

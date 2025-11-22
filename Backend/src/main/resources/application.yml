@@ -1,0 +1,7 @@
+spring:
+  jpa:
+    show-sql: true
+  application:
+    name: lince
+  profiles:
+    active: ${PROFILE:local}
