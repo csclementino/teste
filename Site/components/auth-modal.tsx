@@ -39,7 +39,7 @@ export default function AuthModal({ open, onOpenChange, mode: initialMode }: Aut
 
     try {
       const credentials = btoa(`${email}:${password}`)
-      const response = await fetch("http://localhost:8080/auth", {
+      const response = await fetch("http://4.201.164.119:8080/auth", {
         method: "POST",
         headers: {
           Authorization: `Basic ${credentials}`,
@@ -69,7 +69,7 @@ export default function AuthModal({ open, onOpenChange, mode: initialMode }: Aut
     setError("")
 
     try {
-    const response = await fetch("http://localhost:8080/supervisor", {
+    const response = await fetch("http://4.201.164.119:8080/supervisor", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -100,7 +100,7 @@ export default function AuthModal({ open, onOpenChange, mode: initialMode }: Aut
     // --- LOGIN AUTOMÁTICO ---
 
     const credentials = btoa(`${email}:${registerPassword}`);
-    const loginResponse = await fetch("http://localhost:8080/auth", {
+    const loginResponse = await fetch("http://4.201.164.119:8080/auth", {
       method: "POST",
       headers: {
         Authorization: `Basic ${credentials}`,

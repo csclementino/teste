@@ -39,7 +39,7 @@ export default function EquipeList({ token, refreshTrigger, onRefresh }: EquipeL
     setLoading(true)
     setError("")
     try {
-    const response = await fetch("http://localhost:8080/equipe", {
+    const response = await fetch("http://4.201.164.119:8080/equipe", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -72,7 +72,7 @@ export default function EquipeList({ token, refreshTrigger, onRefresh }: EquipeL
   const handleDelete = async (id: string) => {
     setDeleting(true)
     try {
-      const response = await fetch(`http://localhost:8080/equipe/${id}`, {
+      const response = await fetch(`http://4.201.164.119:8080/equipe/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

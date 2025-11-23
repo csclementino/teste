@@ -1,12 +1,9 @@
 spring:
   datasource:
     url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
-    username: rm560634
-    password: fiap25
+    username: rm559647
+    password: fiap
     driver-class-name: oracle.jdbc.OracleDriver
-  h2:
-    console:
-      enabled: true
   jpa:
     hibernate:
       ddl-auto: update

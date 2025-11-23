@@ -38,7 +38,7 @@ export default function EquipeForm({ token, onSuccess, onCancel, equipeId, initi
       ? JSON.stringify({ id: equipeId, nome, descricao })
       : JSON.stringify({ nome, descricao });
 
-    const response = await fetch("http://localhost:8080/equipe", {
+    const response = await fetch("http://4.201.164.119:8080/equipe", {
       method,
       headers: {
         Authorization: `Bearer ${token}`,
